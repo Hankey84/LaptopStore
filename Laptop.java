@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Laptop {
-    private String model;
+    private String brand;
     private int year;
     private String color;
     private String cpu;
@@ -10,8 +10,8 @@ public class Laptop {
     private String system;
     private double price;
 
-    public Laptop(String model, int year, String color, String cpu, int ram, int storage, String system, double price) {
-        this.model = model;
+    public Laptop(String brand, int year, String color, String cpu, int ram, int storage, String system, double price) {
+        this.brand = brand;
         this.year = year;
         this.color = color;
         this.cpu = cpu;
@@ -21,8 +21,8 @@ public class Laptop {
         this.price = price;
     }
 
-    public String getModel() {
-        return model;
+    public String getBrand() {
+        return brand;
     }
 
     public int getYear() {
@@ -57,13 +57,13 @@ public class Laptop {
         if (this == obj) return true;
         if (this == null  || getClass() != obj.getClass())  return false;
         Laptop laptop = (Laptop) obj;
-        return (this.model == laptop.model) && (this.year == laptop.year) && ( this.color == laptop.color) 
+        return (this.brand == laptop.brand) && (this.year == laptop.year) && ( this.color == laptop.color) 
         && (this.cpu == laptop.cpu) && (this.ram == laptop.ram) && (this.storage == laptop.storage)
         && (this.system == laptop.system) && (this.price == laptop.price);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(model, year, color, cpu, ram, storage, system, price);
+        return Objects.hash(brand, year, color, cpu, ram, storage, system, price);
     }
 }

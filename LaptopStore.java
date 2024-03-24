@@ -133,8 +133,8 @@ public class LaptopStore {
 
         boolean exit = false;
         Scanner scanner = new Scanner(System.in);
-        
         do {
+
             Map<String, Object> filters = new HashMap<>();
             System.out.println("Выберите критерий фильтрации:");
             System.out.println("1 - По модели");
@@ -201,7 +201,7 @@ public class LaptopStore {
             }
 
             store.filterLaptops(filters);
-            System.out.println("Нажмите любую клавишу для продолжения...");
+            System.out.println("Нажмите клавишу Enter для продолжения...");
             scanner.nextLine();
         } while (!exit);
         // scanner.close();
